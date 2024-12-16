@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Attractive and modern font */
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Use overflow-y to enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.blog-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease-in-out;
+}
+
+.blog-page:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.blog-image-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Make it visually distinct */
+    display: flex; /* Add flexbox for better layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Space between elements */
+}
+
+.blog-page {
+    max-height: 80vh; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    padding: 20px; /* Add some padding for aesthetics */
+    border: 1px solid #ccc; /* Optional: border for better visibility */
+}
+
+
+
+
+.blog-image-container:hover {
+    transform: translateY(-5px);
+}
+
+.blog-textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.blog-textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.delete-button,
+.save-button,
+.add-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.team-name-input {
+    display: block; /* Ensure it takes the full width */
+    width: 100%; /* Full width */
+    padding: 12px; /* Increased padding for height */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border color */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s ease; /* Transition for focus state */
+}
+
+.team-name-input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a glow effect on focus */
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.save-button {
+    background-color: #2ecc71;
+}
+
+.add-button {
+    background-color: #3498db;
+    width: 100%;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.save-button:hover {
+    background-color: #27ae60;
+}
+
+.add-button:hover {
+    background-color: #2980b9;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and text-shadow */
+}
+
+/* Hover effect */
+.header-text:hover {
+    color: #3483d3; /* Change text color to blue on hover */
+    text-shadow: 2px 2px 5px rgba(52, 131, 211, 0.7); /* Change the shadow to match the blue hover color */
+}
+
+/* New styles for form alignment and spacing */
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .blog-page {
+        padding: 15px;
+    }
+
+    .blog-textarea {
+        height: 80px;
+    }
+
+    .blog-image-container {
+        flex-direction: column; /* Ensure vertical stacking on small screens */
+    }
+}

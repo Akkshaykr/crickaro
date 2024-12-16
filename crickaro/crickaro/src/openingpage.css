@@ -1,0 +1,157 @@
+/* Main page container with horizontal layout */
+.page-container {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background: linear-gradient(to right, rgba(135, 206, 235, 0.8), rgba(0, 128, 0, 0.8)); /* Sky blue and cricket ground green gradient */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    transition: background 1s ease-in-out, transform 0.4s ease; /* Smooth transition for background and container */
+    position: relative; /* To position the cricket ball */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Right-aligned content container */
+  .content {
+    flex: 1; /* Allow the content container to grow */
+    max-width: 50%; /* Maximum width of the content container */
+    background: rgba(255, 255, 255, 0.5); /* White transparent background */
+    backdrop-filter: blur(20px); /* Strong blur effect for glassmorphism */
+    color: white; /* Text color */
+    padding: 35px; /* Padding around content */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s; /* Smooth transitions */
+  }
+  
+  /* Hover effects on content */
+  .content:hover {
+    transform: scale(1.07); /* Slightly enlarge content on hover */
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.6); /* Larger shadow on hover */
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly brighter background on hover */
+  }
+  
+  /* Title */
+  .title {
+    font-size: 3rem; /* Slightly reduced title font size */
+    margin-bottom: 25px; /* Spacing below title */
+    transition: color 0.3s ease, transform 0.3s; /* Smooth transition for color and scaling */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Enhanced text shadow */
+    font-family: 'Montserrat', sans-serif; /* Modern font style */
+  }
+  
+  .title:hover {
+    color: #00bfff; /* Light blue color on hover */
+    transform: translateY(-7px); /* Slightly raise the title */
+  }
+  
+  /* Description */
+  .description {
+    font-size: 1.6rem; /* Slightly reduced description font size */
+    margin-bottom: 35px; /* Spacing below description */
+    transition: color 0.3s ease, transform 0.3s; /* Smooth transition for color and scaling */
+  }
+  
+  .description:hover {
+    color: #00bfff; /* Light blue color on hover */
+    transform: translateY(-7px); /* Slightly raise description */
+  }
+  
+  /* Categories */
+  .categories {
+    display: flex; /* Flexbox layout for categories */
+    justify-content: space-between; /* Space categories evenly */
+    margin-bottom: 40px; /* Increased spacing below categories */
+    animation: fadeIn 2s ease-out; /* Fade in effect for categories */
+  }
+  
+  /* FadeIn effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .category {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    padding: 25px; /* Reduced padding around categories */
+    border-radius: 20px; /* Rounded corners */
+    flex: 1; /* Allow category to grow */
+    margin-right: 25px; /* Margin between categories */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth hover transition */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .category:last-child {
+    margin-right: 0; /* Remove margin for the last category */
+  }
+  
+  .category h2 {
+    font-size: 1.8rem; /* Slightly reduced subheading font size */
+    margin-bottom: 15px; /* Spacing below subheading */
+    color: black; /* Subheading color */
+    font-weight: bold; /* Bold subheading */
+  }
+  
+  .category p {
+    font-size: 1.1rem; /* Slightly reduced paragraph font size */
+    color: black; /* Paragraph color */
+  }
+  
+  /* Hover effect on category */
+  .category:hover {
+    transform: translateY(-10px); /* Slightly raise category on hover */
+    background-color: rgba(30, 144, 255, 0.2); /* Soft blue background on hover */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Larger shadow effect on hover */
+  }
+  
+  /* Get Started Button */
+  .get-started-btn {
+    background: linear-gradient(to right, #00bfff, #4682b4); /* Gradient button */
+    color: white; /* Button text color */
+    padding: 18px 35px; /* Padding around button */
+    font-size: 1.3rem; /* Reduced button text size */
+    border: none; /* No border */
+    border-radius: 40px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.3s, box-shadow 0.3s ease; /* Smooth transitions */
+    font-weight: bold; /* Bold button text */
+    letter-spacing: 1.5px; /* Slight letter spacing for button */
+  }
+  
+  .get-started-btn:hover {
+    background: linear-gradient(to right, #4682b4, #00bfff); /* Reverse gradient on hover */
+    transform: scale(1.12); /* Slightly enlarge button on hover */
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.7); /* Larger shadow on hover */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .page-container {
+        flex-direction: column; /* Stack image and content on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+        overflow: hidden; /* Prevent scrolling */
+    }
+  
+    .content {
+        max-width: 100%; /* Full width for mobile */
+        padding: 25px; /* Adjust padding for mobile */
+    }
+  
+    .categories {
+        flex-direction: column; /* Stack categories on smaller screens */
+        align-items: center; /* Center categories on mobile */
+    }
+  
+    .category {
+        width: 100%; /* Full width for categories on mobile */
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 25px; /* Spacing between categories */
+    }
+  }
+  

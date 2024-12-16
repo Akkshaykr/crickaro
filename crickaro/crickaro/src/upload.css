@@ -1,0 +1,249 @@
+/* Main Content Container (Centered and Scrollable) */
+.container {
+  display: flex; /* Arrange items horizontally */
+  flex-direction: row; /* Side-by-side display */
+  justify-content: space-between; /* Spread out content */
+  align-items: flex-start; /* Align content to the top */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 900px; /* Set max-width for the container */
+  height: auto; /* Let the height expand based on content */
+  background: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  margin: auto; /* Center the container */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  max-height: 450px;
+   /* Set a maximum height to trigger scrolling */
+   color: #f8f9fa;
+}
+
+
+
+/* Style the h2 text to ensure it's visible */
+h2 {
+  font-size: 24px; /* Adjust the font size */
+  font-weight: bold;
+  color: #f8f9fa; /* Ensure the text is visible */
+  margin-bottom: 15px; /* Add space below the heading */
+  z-index: 1; /* Make sure it appears above other elements */
+}
+
+/* Flex column for the left section (inputs, text, image) */
+.left-section {
+  display: flex;
+  flex-direction: column; /* Arrange text, inputs, etc., vertically */
+  justify-content: flex-start; /* Align items to the top */
+  width: 60%; /* Give 60% of width to the left section */
+}
+
+/* Blog section (or right section with image, etc.) */
+.blog-section {
+  width: 35%; /* Give 35% to the right section (image or blog) */
+  text-align: center;
+}
+
+.blog-section img {
+  width: 120px; /* Fix the width */
+  height: 120px; /* Fix the height */
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure the container flexes correctly */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 80vh; /* Ensure the container spans the full viewport height */
+}
+
+/* Updated Input Fields and Textarea */
+.file-input, .text-input, .select-input, .date-time-input, .blog-textarea {
+  display: block;
+  width: 100%;
+  max-width: 400px; /* Limit maximum width for inputs */
+  padding: 12px; /* Comfortable padding */
+  margin: 20px 0; /* Equal spacing between fields */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px; /* Adjusted font size for better readability */
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+/* Updated Uploaded Image */
+.uploaded-image {
+  width: 300px; /* Fixed medium size for the uploaded image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Equal spacing and center alignment */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block; /* Ensures proper block layout */
+}
+
+
+
+
+/* Buttons */
+.delete-button, .save-button, .add-button {
+  background: linear-gradient(135deg, #6bffb8, #34d399, #187bbd);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px; /* Increased padding */
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  font-size: 18px; /* Increased font size */
+}
+
+.delete-button:hover, .save-button:hover, .add-button:hover {
+  background: #0a4a75;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog Textarea */
+.blog-textarea {
+  height: 100px;
+  resize: none;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Button */
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.image-button:hover {
+  transform: scale(1.05);
+}
+
+.image-button img {
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Full-Width Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 3px; /* Adjusted padding */
+  background: linear-gradient(to right, rgba(135, 206, 235, 0.8), rgba(0, 128, 0, 0.8)); /* Sky blue and cricket ground green gradient */
+
+  width: 100%; /* Full width of the page */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for emphasis */
+  position: fixed; /* Keep header fixed at the top */
+  top: 0;
+  left: 0;
+}
+
+/* Header Image */
+.header-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.header-text {
+  font-size: 28px; /* Increased font size */
+  font-weight: bold;
+ text-decoration-color: #f8f9fa;
+  color: white;
+
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and text-shadow */
+}
+
+/* Hover effect */
+.header-text:hover {
+  color: #3483d3; /* Change text color to blue on hover */
+  text-shadow: 2px 2px 5px rgba(52, 131, 211, 0.7); /* Change the shadow to match the blue hover color */
+}
+
+/* Full-Width Footer */
+
+
+
+
+.footer {
+  display: flex;
+  justify-content: left; /* Center the button */
+  align-items: center; /* Center the items vertically */
+  padding: 3px;
+  background: linear-gradient(to right, rgba(135, 206, 235, 0.8), rgba(0, 128, 0, 0.8)); /* Sky blue and cricket ground green gradient */
+
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: fixed; /* Keep footer fixed at the bottom */
+  bottom: 0;
+  left: 0;
+}
+
+.footer-ball-button {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
+  background: none; /* Removes default button styling */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor on hover */
+}
+
+.footer-ball-button img {
+  margin-right: 10px; /* Add space between image and text */
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+}
+
+.footer-text {
+  font-size: 16px; /* Adjust font size as needed */
+  color: #000; /* Change text color as needed */
+}
+
+
+.footer-description {
+  font-size: 18px; /* Increased font size */
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s;
+}
+
+/* Hover effects */
+.footer-text:hover, .footer-description:hover {
+  color: #3483d3; /* Change color on hover */
+  transform: translateX(5px);
+}
+
+
+
+/* Footer Text Container */
+.footer-text-container {
+  max-width: 70%; /* Container for footer text */
+  text-align: right; /* Align text to the right */
+}
+
+/* Image Container for footer image */
+.footer-image-container {
+  position: relative; /* Positioning relative for containing the image */
+  margin-left: auto; /* Push the image to the right */
+}
+
+.footer-image {
+  width: 120px; /* Fixed width */
+  height: 120px; /* Fixed height */
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+

@@ -1,0 +1,91 @@
+/* Upcoming.css */
+
+.upcoming-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.upcoming-page h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tournament-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow-y: scroll;
+    max-height: 80vh;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tournament-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+}
+
+.tournament-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tournament-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.tournament-image:active {
+    transform: scale(1.1);
+}
+
+.tournament-item h2 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.tournament-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.tournament-item p.status {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-size: 1.2em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tournament-image:hover {
+        transform: scale(1.05);
+    }
+}

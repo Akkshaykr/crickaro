@@ -1,0 +1,111 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, rgba(135, 206, 235, 0.8), rgba(0, 128, 0, 0.8)); /* Sky blue and cricket ground green gradient */
+
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.login-page-background {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.login-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-image .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.login-content {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5); /* Adjust alpha to 0.5 for more transparency */
+
+    backdrop-filter: blur(5px);
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-button {
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color:black;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login-image {
+        height: 200px;
+    }
+}

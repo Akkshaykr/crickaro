@@ -1,0 +1,116 @@
+.tournament-page {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #333;
+}
+
+.tournament-page h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 25px;
+    color: #1a202c;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tournament-page h1:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.tournament-type-buttons, .ball-type-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap for buttons */
+    margin-bottom: 25px;
+}
+
+.tournament-type-buttons button, .ball-type-buttons button {
+    background: rgba(74, 144, 226, 0.7); /* Slightly darker for contrast */
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increased padding for buttons */
+    border-radius: 12px;
+    font-size: 1.1rem; /* Slightly larger font size */
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.tournament-type-buttons button:disabled, .ball-type-buttons button:disabled {
+    background-color: rgba(170, 170, 170, 0.6);
+    cursor: not-allowed;
+}
+
+.tournament-type-buttons button:hover:not(:disabled), .ball-type-buttons button:hover:not(:disabled) {
+    background: rgba(53, 122, 189, 0.9);
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-list {
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap */
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px; /* Increased padding */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.image-container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 250px; /* Increased height */
+    object-fit: cover;
+    border-radius: 10px; /* Slightly more rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+.image-container p {
+    margin-top: 12px; /* Increased margin */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.images p {
+    color: #555;
+    font-size: 1.3rem; /* Increased font size */
+    margin-top: 25px; /* Increased margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}

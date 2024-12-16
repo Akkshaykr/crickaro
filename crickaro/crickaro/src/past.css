@@ -1,0 +1,154 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333; /* Black-ish text */
+}
+
+/* Main Container */
+.past-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 80%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: black; /* Ensuring black text color */
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Team List */
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-height: 400px; /* Ensuring scroll only for the list */
+    overflow-y: auto; /* Keeps vertical scroll */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+/* Details Section */
+.team-details {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 500px; /* Fixed height */
+    overflow-y: auto; /* Scroll within details section if content exceeds height */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+.team-details.active {
+    display: block; /* Show only the selected details */
+}
+
+
+.team-button {
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.team-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+/* Images */
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.blog-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-text {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Error and Loading */
+.error, .loading {
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 20px;
+}
+
+.no-team-selected {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
