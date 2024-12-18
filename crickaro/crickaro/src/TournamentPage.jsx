@@ -17,7 +17,7 @@ const TournamentPage = () => {
             setError('');
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/api/images?district=${district}&tournamentType=${tournamentType}`
+                    `${import.meta.env.VITE_SERVER_APP_URL}/api/images?district=${district}&tournamentType=${tournamentType}`
                 );
 
                 const today = new Date().toISOString().split('T')[0];

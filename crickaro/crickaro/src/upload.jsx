@@ -51,7 +51,7 @@ const Upload = () => {
             }
     
             try {
-                const response = await axios.post("http://localhost:5000/save-tournament", {
+                const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/save-tournament`, {
                     image,
                     district,
                     tournamentBall,

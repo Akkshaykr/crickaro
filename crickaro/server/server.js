@@ -22,11 +22,12 @@ mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-.then(() => console.log("Connected to MongoDB Atlas"))
-.catch(err => console.error("MongoDB connection error:", err));
-
-// Middleware
-app.use(cors({ origin: "http://localhost:5173", methods: ["GET", "POST"], credentials: true }));
+    .then(() => console.log("Connected to MongoDB Atlas"))
+    .catch(err => console.error("MongoDB connection error:", err));
+const allowedOrigins = process.env.APPLICATION_URL;
+// Middleware,`
+app.use(cors({ origin: allowedOrigins, methods: ["GET", "POST", 'PUT', 'DELETE'], credentials: true, allowedHeaders: ['Content-Type', 'Authorization'] }));
+app.options('*', cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -141,7 +142,7 @@ app.get('/api/images', async (req, res) => {
     console.log(req.query)
     let filter = { district };
     if (tournamentType && tournamentType !== 'All') {
-        filter.tournamentType = tournamentType;     
+        filter.tournamentType = tournamentType;
     }
 
     try {
@@ -163,7 +164,7 @@ app.get('/api/tournaments', async (req, res) => {
         if (tournamentBall) filter.tournamentBall = tournamentBall;
 
         const tournaments = await Upload.find(filter);
-        
+
         if (tournaments.length === 0) {
             return res.status(404).json({ message: "No tournaments found for the specified criteria." });
         }
@@ -211,7 +212,7 @@ app.post('/api/save-blog', async (req, res) => {
         // Create new blog instance
         const newBlog = new Blog({ images, text, district, teamName });
         await newBlog.save();
-        
+
         // Return success response
         res.status(201).json({ message: 'Blog saved successfully!', blog: newBlog });
     } catch (error) {

@@ -18,7 +18,7 @@ const Ongoing = () => {
             try {
                 const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
                 console.log(today);
-                const response = await axios.get(`http://localhost:5000/api/images?district=${district}&tournamentType=All`);
+                const response = await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/api/images?district=${district}&tournamentType=All`);
 
                 // Filter to show only tournaments that start today
                 const ongoingTournaments = response.data.filter((tournament) => {

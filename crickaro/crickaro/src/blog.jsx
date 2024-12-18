@@ -32,7 +32,7 @@ const Blog = () => {
             const base64Image = await fileToBase64(file); // Convert each image to Base64
             updatedBlogImages.push({ src: base64Image }); // Add a new entry for each image
         }
-        
+
         setBlogImages(prevImages => [...prevImages, ...updatedBlogImages]);
     };
 
@@ -43,14 +43,14 @@ const Blog = () => {
     const handleSaveBlog = async () => {
         if (blogText && district && teamName && blogImages.length > 0) {
             try {
-                const response = await axios.post('http://localhost:5000/api/save-blog', { 
-                    images: blogImages.map(image => image.src), 
-                    text: blogText, 
-                    district, 
-                    teamName 
+                const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/api/save-blog`, {
+                    images: blogImages.map(image => image.src),
+                    text: blogText,
+                    district,
+                    teamName
                 });
                 alert(response.data.message);
-                
+
                 // Clear the form after saving
                 setBlogImages([]);
                 setBlogText('');
@@ -64,7 +64,7 @@ const Blog = () => {
             alert('Please fill in the text, image, district, and team name before saving.');
         }
     };
-    
+
 
     const districts = [
         "Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri",
@@ -77,12 +77,12 @@ const Blog = () => {
     return (
         <div className="blog-page">
             <h2 className="header-text">Blog Section</h2>
-            <input 
-                type="file" 
-                accept="image/*" 
+            <input
+                type="file"
+                accept="image/*"
                 multiple // Allow multiple file selection
-                onChange={handleBlogImageChange} 
-                className="file-input" 
+                onChange={handleBlogImageChange}
+                className="file-input"
             />
             {blogImages.map((blogImage, index) => (
                 <div key={index} className="blog-image-container">

@@ -14,7 +14,7 @@ const Past = () => {
     useEffect(() => {
         const fetchBlogDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/blogs?district=${district}`);
+                const response = await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/api/blogs?district=${district}`);
                 if (response.data && response.data.length > 0) {
                     setBlogDetails(response.data);
                 } else {

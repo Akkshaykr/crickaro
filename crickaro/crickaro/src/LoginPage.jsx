@@ -34,12 +34,12 @@ const LoginPage = () => {
                 }
 
                 // Attempt registration
-                const response = await axios.post("http://localhost:5000/api/register", { name, email, password, domain });
+                const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/api/register`, { name, email, password, domain });
                 alert("Sign-up successful!");
                 handleNavigation(response.data.domain);
             } else {
                 // Login logic with domain validation
-                const response = await axios.post("http://localhost:5000/api/login", { email, password });
+                const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/api/login`, { email, password });
                 const { token, domain: userDomain } = response.data;
                 console.log(response.data)
 
@@ -70,7 +70,7 @@ const LoginPage = () => {
         }
 
         try {
-            await axios.post("http://localhost:5000/forgot-password", { email });
+            await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/forgot-password`, { email });
             alert("Password reset link has been sent to your email.");
         } catch (error) {
             console.error("Error sending password reset email:", error.response?.data || error.message);

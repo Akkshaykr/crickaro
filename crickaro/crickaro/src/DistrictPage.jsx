@@ -13,7 +13,7 @@ const DistrictPage = () => {
     useEffect(() => {
         const fetchDistricts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/districts');
+                const response = await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/api/districts`);
                 if (response.status === 200) {
                     setDistricts(response.data);
                 }

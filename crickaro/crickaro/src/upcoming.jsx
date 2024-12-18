@@ -7,7 +7,7 @@ const UpcomingTournaments = ({ district }) => {
 
     const fetchUpcomingTournaments = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/tournaments', {
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/api/tournaments`, {
                 params: { district, tournamentStatus: 'Upcoming' },
             });
 
