@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './DistrictPage.css';
 
+
 const DistrictPage = () => {
     const [districts, setDistricts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
