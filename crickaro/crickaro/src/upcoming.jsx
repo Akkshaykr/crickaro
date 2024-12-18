@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 import './upcoming.css';
 
 const UpcomingTournaments = () => {
@@ -45,15 +47,17 @@ const UpcomingTournaments = () => {
             ) : error ? (
                 <p className="error">{error}</p>
             ) : upcomingTournaments.length > 0 ? (
-                <div className="tournament-list">
+                <div className="tournament-list scrollable-container">
                     {upcomingTournaments.map((tournament, index) => (
                         <div key={index} className="tournament-item">
                             <h2>{tournament.teamName}</h2>
-                            <img
-                                src={tournament.image}
-                                alt={`Tournament ${tournament.teamName}`}
-                                className="tournament-image"
-                            />
+                            <Zoom>
+                                <img
+                                    src={tournament.image}
+                                    alt={`Tournament ${tournament.teamName}`}
+                                    className="tournament-image"
+                                />
+                            </Zoom>
                             <p>Ball Type: {tournament.tournamentBall}</p>
                             <p>Status: Upcoming</p>
                             <p>Date: {new Date(tournament.startDate).toLocaleDateString()}</p>
