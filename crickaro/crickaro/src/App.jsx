@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import OpeningPage from './openingPage'; // Import OpeningPage
+import OpeningPage from "./openingpage"; // Import OpeningPage
 import Upload from './upload';           // Ensure this file exists in the specified path
 import LoginPage from './LoginPage';     // Ensure this file exists in the specified path
 import DistrictPage from './DistrictPage'; // Ensure this file exists in the specified path
