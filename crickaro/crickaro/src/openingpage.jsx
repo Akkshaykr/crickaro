@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './openingPage.css';
+import './openingpage.css';
 
 
 const OpeningPage = () => {
@@ -12,7 +12,7 @@ const OpeningPage = () => {
 
   return (
     <div className="page-container">
-      
+
       <div className="content">
         <h1 className="title">Welcome to Crickaro</h1>
         <p className="description">
@@ -23,14 +23,14 @@ const OpeningPage = () => {
           <div className="category">
             <h2>Upload</h2>
             <p>
-              If you're organizing a cricket tournament, upload your notice here. 
+              If you're organizing a cricket tournament, upload your notice here.
               Teams from all districts in Tamil Nadu will be able to view it.
             </p>
           </div>
           <div className="category">
             <h2>User</h2>
             <p>
-              Are you a team looking for tournaments? 
+              Are you a team looking for tournaments?
               Check out our listings to find tournaments happening in your district.
             </p>
           </div>
