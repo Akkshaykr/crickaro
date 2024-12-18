@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import axios from "axios";
+import log from './assets/log.png';
 
 const LoginPage = () => {
     const [isSignUp, setIsSignUp] = useState(false);
@@ -92,7 +93,7 @@ const LoginPage = () => {
         <div className="login-page-background">
             <div className="login-container">
                 <div className="login-image">
-                    <img src="/src/assets/log.png" alt="Side Image" className="image" />
+                    <img src={log} alt="Side Image" className="image" />
                 </div>
                 <div className="login-content">
                     <h1 className="title">Welcome to Crickaro!!!</h1>

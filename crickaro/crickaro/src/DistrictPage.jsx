@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './DistrictPage.css';
-
+import dist from './assets/district.webp';
 
 const DistrictPage = () => {
     const [districts, setDistricts] = useState([]);
@@ -36,7 +36,7 @@ const DistrictPage = () => {
     return (
         <div className="district-page">
             <div className="left-container">
-                <img src="/src/assets/district.webp" alt="Tamil Nadu Map" className="left-image" />
+                <img src={dist} alt="Tamil Nadu Map" className="left-image" />
             </div>
             <div className="right-container">
                 <h1>Select Your District</h1>
