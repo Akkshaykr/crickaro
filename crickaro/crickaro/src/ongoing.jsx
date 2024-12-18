@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
-import './Ongoing.css';
+import './ongoing.css';
 
 const Ongoing = () => {
     const { district } = useParams(); // Get the district from URL parameters

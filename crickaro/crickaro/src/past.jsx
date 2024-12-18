@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './Past.css';
+import './past.css';
 
 const Past = () => {
     const { district } = useParams();

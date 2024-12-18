@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import axios from "axios";
-import "./Blog.css"; // Ensure proper styles are defined
+import "./blog.css"; // Ensure proper styles are defined
 
 const Blog = () => {
     const [blogImages, setBlogImages] = useState([]); // Start with an empty array for images
